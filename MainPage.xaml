@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplikacjaMobilna.MainPage">
+
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Label Text="Odtwarzacz muzyki"
+              FontSize="24"
+              HorizontalOptions="Center" />
+        <Image x:Name="coverImage"
+              HeightRequest="300"
+              Aspect="AspectFit" />
+        <Label x:Name="titleLabel"
+              FontSize="Title"
+              HorizontalOptions="Center" />
+        <Label x:Name="authorLabel"
+              FontSize="Small"
+              HorizontalOptions="Center" />
+        <Slider x:Name="durationSlider"
+               Minimum="0"
+               Maximum="100"
+               Value="0" />
+        <Label x:Name="durationLabel"
+              Text="0:00"
+              HorizontalOptions="Center" />
+        <Grid ColumnDefinitions="*,*,*"
+     Padding="30,10"
+     VerticalOptions="Center">
+            <ImageButton Grid.Column="0"
+                Source="rewind.png"
+                Clicked="OnPreviousClicked"
+                WidthRequest="50"
+                HeightRequest="50"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Start" />
+            <ImageButton Grid.Column="1"
+                Source="play.png"
+                Clicked="OnPlayClicked"
+                WidthRequest="60"
+                HeightRequest="60"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Center" />
+            <ImageButton Grid.Column="2"
+                Source="forward.png"
+                Clicked="OnNextClicked"
+                WidthRequest="50"
+                HeightRequest="50"
+                BackgroundColor="Transparent"
+                HorizontalOptions="End" />
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
